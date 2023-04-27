@@ -1,0 +1,52 @@
+body, html, p, h1 {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+.header {
+    position: relative;
+    z-index: 2;
+}
+
+.header .top {
+    display: flex;
+    width: 100%;
+    background-color: #113c39;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+}
+
+.top h1{
+    font-size:100px;
+    background: linear-gradient(rgb(67, 124, 204), rgb(69, 214, 292));
+    background-clip:content-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    pointer-events: none;
+    opacity: 0;
+    animation: fade 1s ease-in 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.separator {
+    height: 5px;
+    background: linear-gradient( rgb(67, 124, 204), rgb(69, 214, 292));
+    filter:blur(2px);
+}
+
+.content {
+    z-index: 1;
+    position:relative;
+    background-color: rgb(82, 82, 82);;
+    height: 100px;
+}
